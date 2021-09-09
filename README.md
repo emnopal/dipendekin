@@ -1,2 +1,2 @@
-# url_shortner
-URL Shortner using Django+Bootstrap
+# urlshortener
+URL shortener using Django+Bootstrap
