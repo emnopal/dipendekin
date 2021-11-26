@@ -13,7 +13,8 @@ from django import forms
 class ShortenerForm(forms.ModelForm):
     long_url = forms.URLField(widget=forms.URLInput(
         attrs={"class": "form-control form-control-lg",
-               "placeholder": "Enter your URL to shorten"}
+               "placeholder": "masukin URL buat dipendekin",
+               "style": "text-align: center;"}
     ))
 
     class Meta:
@@ -56,4 +57,4 @@ def redirect_url_view(request, shortened_part):
         shortener.save()
         return HttpResponseRedirect(shortener.long_url)
     except:
-        raise Http404('This link is broken')
+        raise Http404('link rusak gan')
