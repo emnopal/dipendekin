@@ -15,12 +15,16 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+import os
+# Set the project base directory
+from dotenv import load_dotenv
+
+load_dotenv()
+SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%nxbhv4x6w+omg9qb3i&yxn#dk!ifisi50)m(av8ssxxgrul@^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
