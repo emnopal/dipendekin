@@ -1,2 +1,2 @@
-# urlshortener
-URL shortener using Django+Bootstrap
+# dipendekin
+dipendekin, sebuah website buat pendekin url
