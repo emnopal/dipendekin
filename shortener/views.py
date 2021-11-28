@@ -12,9 +12,12 @@ from django import forms
 
 class ShortenerForm(forms.ModelForm):
     long_url = forms.URLField(widget=forms.URLInput(
-        attrs={"class": "form-control form-control-lg",
-               "placeholder": "masukin URL buat dipendekin",
-               "style": "text-align: center;"}
+        attrs={
+            "class": "form-control form-control-lg",
+            "placeholder": "masukin URL buat dipendekin",
+            "style": "text-align: center;",
+            "oninvalid": "this.setCustomValidity('masukin link dimari gan')",
+            'oninput': "setCustomValidity('masukin link nya yang bener gan')"},
     ))
 
     class Meta:
